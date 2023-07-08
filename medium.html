@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Easy</title>
+    <link rel="stylesheet" href="spellingbee.css">
+    <link rel="icon" href="beee.png">
+    <body background="wall.jpg" class="bg">
+      <div class="header">
+      <div class="container">
+        <div class="image">
+         <img src="spellingbee.gif">
+       </div>
+       <div class="text">
+         <h2>Group Assignment</h2>
+         <h1>Spelling Bee</h1>
+       </div>
+       </div>
+       </div>
+  </head>
+  <body>
+    <center>
+      <main>
+        <div class='wrapper' id='wrapper'> <!-- Quiz wrapper -->
+          <div id='difficulty'>
+            <div>
+              <button class='difficultyBtn' id='medium' onclick='handleMediumBtn()'>Play</button>
+            </div>
+          </div>
+          <div id='main'>
+            <div class='topInfo'>
+              <p id='scoreInfo' class="score"></p>
+            </div>
+            <div id='questions' class='questions'>
+              <br>
+              <div class='playBtn' onclick="playAudio()">
+                <img src='playword.gif' alt='Play button' width='200px'/>
+              </div>
+            </div>
+            <br>
+            <form class='answers' onsubmit='handleSubmit(event)'>
+              <input id='answers' type='text' placeholder='GUESS WORD' onchange='handleChange(event)' />
+              <div class='btnWrapper'>
+                <br>
+                <button type='submit' class='outlinedBtn'>Submit</button>
+                <button type='reset' class='outlinedBtn'><a href="medium.html">Reset</a></button>
+              </div>
+            </form>
+            <br><br>
+            <div id='hintWrapper' class='hint'>
+              <button id='hint' onclick='showHint()'>Hint</button>
+              <p id='showHint' class='showHint'></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    <script src='medium.js'></script>
+  </center>
+  </body>
+</html>
